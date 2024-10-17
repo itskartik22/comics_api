@@ -101,7 +101,7 @@ All the routes and input fields are set in the Postman collection provided with 
 - **To Import the Collection**
     1. Open Postman.
     2. Click on the Import button.
-    3. Select File and upload the Postman collection JSON file included in this repository.
+    3. Select File and upload the Postman collection JSON file `Comic Books.postman_collection.json` included in this repository.
     4. Once imported, you will have all the necessary requests configured to interact with the API.
 
 # Thank you

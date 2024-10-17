@@ -1,0 +1,391 @@
+{
+	"info": {
+		"_postman_id": "9c297172-8e5d-49e3-b765-ff28548e242a",
+		"name": "Comic Books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30295427"
+	},
+	"item": [
+		{
+			"name": "Comics",
+			"item": [
+				{
+					"name": "Create Comic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookName\": \"Deadpool Kills the Marvel Universe\",\r\n    \"authorName\": \"Cullen Bunn\",\r\n    \"yearOfPublication\": 2012,\r\n    \"price\": 15.99,\r\n    \"discount\": 10,\r\n    \"numberOfPages\": 120,\r\n    \"condition\": \"new\",\r\n    \"description\": \"Deadpool embarks on a mission to kill every superhero.\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/comics/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comics",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Comics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/comics/get?condition=new&maxRange=30&minRange=15&shortBy=price",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comics",
+								"get"
+							],
+							"query": [
+								{
+									"key": "condition",
+									"value": "new"
+								},
+								{
+									"key": "maxRange",
+									"value": "30"
+								},
+								{
+									"key": "minRange",
+									"value": "15"
+								},
+								{
+									"key": "shortBy",
+									"value": "price"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comic By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/comics/get/670ec30a86d00f4d1cb5018b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comics",
+								"get",
+								"670ec30a86d00f4d1cb5018b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comic By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/comics/delete/670ec30a86d00f4d1cb5018b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comics",
+								"delete",
+								"670ec30a86d00f4d1cb5018b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comic By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\" : 45,\r\n    \"discount\": 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/comics/update/670eb5e29c83fed42f838c42",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comics",
+								"update",
+								"670eb5e29c83fed42f838c42"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comics By Query",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/comics/get?limit=2&page=5&maxRange=30&minRange=5&sortBy=price",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comics",
+								"get"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "5"
+								},
+								{
+									"key": "maxRange",
+									"value": "30"
+								},
+								{
+									"key": "minRange",
+									"value": "5"
+								},
+								{
+									"key": "sortBy",
+									"value": "price"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Managers",
+			"item": [
+				{
+					"name": "Create Manager",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user3@gmail.com\",\r\n    \"password\": \"654321\",\r\n    \"name\": \"User3\",\r\n    \"accessPass\": \"UEFmESkZ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/comics/manager/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comics",
+								"manager",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Manager By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/comics/manager/get/671160be30e3cdd9272edf49",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comics",
+								"manager",
+								"get",
+								"671160be30e3cdd9272edf49"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Managers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/comics/manager/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comics",
+								"manager",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user2@gmail.com\",\r\n    \"password\": \"654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/comics/manager/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comics",
+								"manager",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/comics/manager/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comics",
+								"manager",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Manager",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/comics/manager/delete/671160be30e3cdd9272edf49",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comics",
+								"manager",
+								"delete",
+								"671160be30e3cdd9272edf49"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Manager",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"User2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/comics/manager/update/67116086f349bfcfd51eae41",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comics",
+								"manager",
+								"update",
+								"67116086f349bfcfd51eae41"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,3 @@
+#Used to ignore files and directories from being tracked by git
+config.env
+node_modules/

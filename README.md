@@ -23,7 +23,7 @@ Create a `config.env` file in the root directory of your project and add the fol
 
 ```bash
 NODE_ENV=development
-PORT=5000
+PORT=8000
 MONGO_DB_URI=<your-mongodb-connection-string>
 MONGO_DB_NAME=<your-database-name>
 JWT_SECRET=<your-jwt-secret>
@@ -41,8 +41,9 @@ Start by cloning the project repository to your local machine:
 
 ```bash
 git clone https://github.com/itskartik22/comics_api
-cd comic-api
+cd comics-api
 ```
+
 ### 2. Install dependencies
 
 After cloning the repository, install the necessary Node.js packages by running:
@@ -50,12 +51,15 @@ After cloning the repository, install the necessary Node.js packages by running:
 ```bash
 npm install
 ```
+
 ### 3. Set up environment variables
 
 Create a config.env file in the root directory of the project by copying the example configuration file:
+
 ```bash
 cp config.example.env config.env
 ```
+
 Open the .env file and fill in the following environment variables:
 
 - NODE_ENV: The environment in which the app is running (development or production).
@@ -67,9 +71,10 @@ Open the .env file and fill in the following environment variables:
 - ACCOUNT_ACCESS_PASS: Access pass for creating the first manager account.
 
 Example of config.env:
+
 ```bash
 NODE_ENV=development
-PORT=5000
+PORT=8000
 MONGO_DB_URI=mongodb://localhost:27017/comic-store
 MONGO_DB_NAME=comics
 JWT_SECRET=your_jwt_secret_key
@@ -78,12 +83,16 @@ ACCOUNT_ACCESS_PASS=super_secret_pass
 ```
 
 ### 4. Run Server
+
 Once you’ve set the environment variables, run the server using:
+
 ```bash
 npm start // for production
 npm run dev // for local run
 ```
+
 ## Comic Book CRUD Operations
+
 Once logged in as a manager, you can manage comic books using the following API routes:
 
 - **Craete Manager Account**: POST /api/comics/manager/create
@@ -96,12 +105,13 @@ Once logged in as a manager, you can manage comic books using the following API 
 - **Delete a Comic**: DELETE /api/comics/:id
 
 ## Using Postman for Testing
+
 All the routes and input fields are set in the Postman collection provided with this project. Import the Postman collection into Postman to test the functionality easily.
 
 - **To Import the Collection**
-    1. Open Postman.
-    2. Click on the Import button.
-    3. Select File and upload the Postman collection JSON file `Comic Books.postman_collection.json` included in this repository.
-    4. Once imported, you will have all the necessary requests configured to interact with the API.
+  1. Open Postman.
+  2. Click on the Import button.
+  3. Select File and upload the Postman collection JSON file `Comic Books.postman_collection.json` included in this repository.
+  4. Once imported, you will have all the necessary requests configured to interact with the API.
 
 # Thank you
